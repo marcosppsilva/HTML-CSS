@@ -1,0 +1,210 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@400;600&display=swap');
+@font-face {
+    font-family: 'android';
+    src: url(../fontes/idroid.otf) format(opentype);
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+/*Paleta de cores usada:
+#50FFB1 - Verde Claro
+#4FB286 - Verde Mediano
+#3C896D - Verde Escuro
+#082d0fa2 - Verde Dark*/
+    
+--VerdeClaro: #50FFB1; 
+--VerdeMediano: #4FB286; 
+--VerdeEscuro: #3C896D;
+--VerdeDark: #082d0fa2;
+--sombratexto1: #50ffb06e;
+--sombratexto2: #50ffb044;
+--backgroundaside: #50ffb060;
+
+--fontpadrao: Arial, Helvetica, sans-serif;
+--fontdestaque: 'Oswald', sans-serif;
+--fontandroid: 'android', 'cursive';
+    }
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    font-family: var(--fontpadrao); 
+    background-color: var(--VerdeClaro);
+}
+
+header {
+    background-image: linear-gradient(to bottom,var(--VerdeClaro), var(--VerdeMediano), var(--VerdeEscuro), var(--VerdeDark));
+    min-height: 150;
+    padding-top: 40px;
+    color: white;
+    text-shadow:1px 1px 3px black;
+    text-align: center;
+}
+header > h1{
+    font-family: 'Oswald', sans-serif;
+    font-weight: normal;
+    font-size: 3em;
+    margin-bottom: 20px;
+    }
+header > p {
+    font-size: 1.2em;
+    max-width: 500px;
+    padding: 0px 10px 20px 0px;
+    margin: auto;
+}
+nav {
+    background-color: var(--VerdeDark);
+    padding: 10px;
+    box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.5);
+}
+nav > a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    text-shadow:1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+nav > a:hover {
+    text-decoration: underline;
+    background-color: var(--VerdeMediano);
+    color: var(--VerdeDark);
+    border-radius: 5px;
+    transition-duration: 0.8s;
+}
+
+main {
+    background-color: white;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    max-width: 1000px;
+    min-width: 320px;
+    text-align: justify;
+    padding: 20px;
+    margin: auto;
+    margin-bottom: 30px;
+}
+main p {
+    text-indent: 30px;
+    margin: 15px 0px;
+    text-align: justify;
+    line-height: 2em;
+}
+main img {
+    width: 100%;
+}
+
+div.video {
+    background-color: var(--VerdeEscuro);
+    margin: 0px -20px 30px -20px;
+    padding: 20px;
+    padding-bottom: 59%;
+    position: relative;
+}
+
+div.video > iframe {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+}
+h1#tituloprincipal {
+    background-image: linear-gradient(to right, var(--VerdeDark),var(--VerdeEscuro), transparent);
+    color: white;
+    font-size: 1.8em;
+    margin: 10px;
+    border-radius: 10px 0px 0px 10px;
+}
+article > h1, h2 {
+    font-family: 'android', sans-serif;
+    font-weight: normal;
+    font-size: 1.4em;
+    color: var(--VerdeEscuro);
+    padding: 5px;
+    background-image: linear-gradient(to right, var(--sombratexto1),var(--sombratexto2), white);
+    margin: 10px;
+    text-indent: 10px;
+}
+#bugdroihumano {
+    max-width: 350px;
+    display: block;
+    margin: auto;
+}
+.destaque, .destaquelink {
+    color: var(--VerdeEscuro);
+    font-weight: bold;
+}
+
+.destaquelink {
+    text-decoration: none;
+    background-color: var(--sombratexto1);
+    padding: 3px 5px;
+    border-radius: 5px;
+    margin: 2px;
+}
+.destaquelink:hover {
+    text-decoration: underline;
+    background-color:var(--sombratexto2);
+}
+.destaquelink::after {
+    content: '🔗';
+}
+
+aside {
+    background-color: var(--backgroundaside);
+    padding: 10px;
+    border-radius: 10px;
+    margin: auto;
+    box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.5);
+}
+
+aside > h3 {
+    color: white;
+    background-color: var(--VerdeEscuro) ;
+    border-radius: 10px 10px 0px 0px;
+    margin: -10px -10px 0px -10px;
+    padding: 10px;
+}
+aside ul {
+    columns: 2;
+    text-indent: 10px;
+}
+.versaoandroid::before {
+    content: '✔';
+}
+.textooculto {
+    text-decoration: none;
+}
+abbr.title {
+    background-color: rgba(0, 0, 0, 0.438);
+    color: white;
+    border-radius: 3px;
+}
+footer {
+    background-color: var(--VerdeEscuro) ;
+    margin: 10px -10px -10px -10px;
+    color: white;
+    padding: 5px;
+    text-align: center;
+    text-shadow:1px 1px 2px rgba(0, 0, 0, 0.5);
+    font-size: 0.8em;
+    }
+span.rodapenegrito {
+        font-weight: bold;
+    }
+a.rodapenegrito {
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+    }
+a.rodapenegrito:hover {
+        text-decoration: underline;
+        color: var(--VerdeMediano);
+    }

@@ -1,0 +1,1 @@
+Neste exercício ele apenas mostra algumas tags que estão obsoletas e como ela aparece no visual studio code. Opter por não fazer o mesmo. Verificar no discord a aula correspondente.
